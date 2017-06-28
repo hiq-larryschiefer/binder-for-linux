@@ -16,4 +16,11 @@ cutils_sources := \
 	strlcpy.c \
 	threads.c
 
-objects += $(patsubst %.c,cutils/%.o, $(cutils_sources))
+cutils_objects += $(patsubst %.c,cutils/%.o, $(cutils_sources))
+
+cutils_lib := libcutils.a
+
+all_libs += $(cutils_lib)
+
+$(cutils_lib): $(cutils_objects)
+
