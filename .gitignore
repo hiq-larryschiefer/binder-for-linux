@@ -34,3 +34,11 @@
 
 .DS_Store
 .vscode/
+
+# Linux kernel module build files
+*.cmd
+.tmp_versions
+Module.symvers
+*.mod.c
+modules.order
+
